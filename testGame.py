@@ -26,7 +26,7 @@ aoe.addCustomEntity(aoe.starSpaceHexes[22], gameShipLib[2])
 s0 = gameShipLib[0]
 s1 = gameShipLib[1]
 s2 = gameShipLib[2]
-s1.command = 'ERIC'
+s1.command = 'VSVS'
 
 #t1 = s1.findTargets()
 #print(t1[0].entity.vesselID)
