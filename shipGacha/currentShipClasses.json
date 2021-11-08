@@ -1,0 +1,37 @@
+[
+    {
+        "BB":
+        [
+            "AmagiClass",
+            "EssexClass",
+            "NewJerseyClass",
+            "VittorioVenetoClass",
+            "PrinceOfWalesClass",
+            "HoodClass"  
+        ],
+        "BC":
+        [
+            "ZenithClass",
+            "EclipseClass",
+            "PenumbraClass"
+        ],
+        "CS":
+        [
+            "VoltageClass",
+            "DynamoClass"
+        ],
+        "CA":
+        [
+            "ApocalypseClass"
+        ],
+        "CL":
+        [
+            "MidnightClass"
+        ],
+        "DD":
+        [
+            "JohnstonClass",
+            "ShimakazeClass"
+        ]
+    }
+]
