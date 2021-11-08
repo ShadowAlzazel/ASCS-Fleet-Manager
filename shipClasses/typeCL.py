@@ -11,8 +11,8 @@ class MidnightClass(Lightcruiser):
     ammount = 0 
     shiptype = 'CL'
     shipStats = {
-        "FP": 200, "ACC": 35, "EVA": 45, "SPD": 35,
-        "armor": 2, "luck": 10
+        "FP": 200, "ACC": 35, "EVA": 45, "SPD": 7,
+        "RDR": 5, "LCK": 10
     }
     
     shields = 7500
@@ -22,6 +22,7 @@ class MidnightClass(Lightcruiser):
         MidnightClass.ammount += 1
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(HyperShieldGen(vID))
         self.defenses['ArmorType'].append(TitaniumArmor(vID))
         self.primaryBattery = [triple_A6_LaserLance(vID, ''.join(['T', str(x)])) for x in range(1, 5)]

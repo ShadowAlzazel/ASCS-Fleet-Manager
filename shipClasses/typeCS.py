@@ -10,8 +10,8 @@ from shipClasses.shipRole import Strikecruiser
 class VoltageClass(Strikecruiser):
     ammount = 0
     shipStats = {
-        "FP": 287, "ACC": 39, "EVA": 41, "SPD": 34,
-        "armor": 2.5, "luck": 10
+        "FP": 287, "ACC": 39, "EVA": 41, "SPD": 7,
+        "RDR": 5, "LCK": 10
     }
     
     shields = 12000
@@ -21,6 +21,7 @@ class VoltageClass(Strikecruiser):
         VoltageClass.ammount += 1
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(HyperShieldGen(vID))
         self.defenses['ArmorType'].append(OrichalcumAlloyArmor(vID))
         self.primaryBattery = []
@@ -42,8 +43,8 @@ class VoltageClass(Strikecruiser):
 class DynamoClass(Strikecruiser):
     ammount = 0
     shipStats = {
-        "FP": 298, "ACC": 40, "EVA": 38, "SPD": 32,
-        "armor": 2.5, "luck": 10
+        "FP": 298, "ACC": 40, "EVA": 38, "SPD": 7,
+        "RDR": 5, "LCK": 10
     }
     
     shields = 13000
@@ -53,6 +54,7 @@ class DynamoClass(Strikecruiser):
         DynamoClass.ammount += 1
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(HyperShieldGen(vID))
         self.defenses['ArmorType'].append(OrichalcumAlloyArmor(vID))
         self.primaryBattery = []

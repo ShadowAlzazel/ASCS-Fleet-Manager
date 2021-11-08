@@ -1,4 +1,4 @@
-print("shipClasses Module")
+#print("shipClasses Module")
 from shipClasses.typeBB import *
 from shipClasses.typeBC import *
 from shipClasses.typeCS import *

@@ -10,8 +10,8 @@ from shipClasses.shipRole import Battleship
 class EssexClass(Battleship):
     ammount = 0
     shipStats = {
-        "FP": 666, "ACC": 38, "EVA": 30, "SPD": 25,
-        "armor": 3, "luck": 10
+        "FP": 666, "ACC": 38, "EVA": 30, "SPD": 4,
+        "RDR": 5, "LCK": 10
     }
 
     shields = 46600 
@@ -20,6 +20,7 @@ class EssexClass(Battleship):
     def __init__(self, hullnumber, name):
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(DurasteelArmor(vID))
         self.primaryBattery = [triple_M22_ThorGigaGuns(vID, ''.join(['T', str(x)])) for x in range(1,5)]
@@ -43,8 +44,8 @@ class EssexClass(Battleship):
 class AmagiClass(Battleship):
     ammount = 0
     shipStats = {
-        "FP": 682, "ACC": 37, "EVA": 31, "SPD": 26,
-        "armor": 3, "luck": 10
+        "FP": 682, "ACC": 37, "EVA": 31, "SPD": 4,
+        "RDR": 5, "LCK": 10
     }
 
     shields = 43200 
@@ -53,6 +54,7 @@ class AmagiClass(Battleship):
     def __init__(self, hullnumber, name):
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(DurasteelArmor(vID))
         self.primaryBattery = [double_M22_ThorGigaGuns(vID, ''.join(['T', str(x)])) for x in range(1,7)]
@@ -69,8 +71,8 @@ class AmagiClass(Battleship):
 class VittorioVenetoClass(Battleship):
     ammount = 0
     shipStats = {
-        "FP": 660, "ACC": 35, "EVA": 30, "SPD": 25,
-        "armor": 3, "luck": 10
+        "FP": 660, "ACC": 35, "EVA": 30, "SPD": 4,
+        "RDR": 5, "LCK": 10
     }
 
     shields = 42100 
@@ -79,6 +81,7 @@ class VittorioVenetoClass(Battleship):
     def __init__(self, hullnumber, name):
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(DurasteelArmor(vID))
         self.primaryBattery = [triple_M22_ThorGigaGuns(vID, ''.join(['T', str(x)])) for x in range(1,5)]
@@ -95,8 +98,8 @@ class VittorioVenetoClass(Battleship):
 class HoodClass(Battleship):
     ammount = 0
     shipStats = {
-        "FP": 685, "ACC": 37, "EVA": 30, "SPD": 26,
-        "armor": 3, "luck": 10
+        "FP": 685, "ACC": 37, "EVA": 30, "SPD": 4,
+        "RDR": 5, "LCK": 10
     }
 
     shields = 45300 
@@ -105,6 +108,7 @@ class HoodClass(Battleship):
     def __init__(self, hullnumber, name):
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(DurasteelArmor(vID))
         self.primaryBattery = [double_M22_ThorGigaGuns(vID, ''.join(['T', str(x)])) for x in range(1,7)]
@@ -121,8 +125,8 @@ class HoodClass(Battleship):
 class PrinceOfWalesClass(Battleship):
     ammount = 0
     shipStats = {
-        "FP": 654, "ACC": 36, "EVA": 29, "SPD": 25,
-        "armor": 3, "luck": 10
+        "FP": 654, "ACC": 36, "EVA": 29, "SPD": 4,
+        "RDR": 5, "LCK": 10
     }
 
     shields = 42800 
@@ -131,6 +135,7 @@ class PrinceOfWalesClass(Battleship):
     def __init__(self, hullnumber, name):
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(DurasteelArmor(vID))
         self.primaryBattery = []
@@ -153,8 +158,8 @@ class PrinceOfWalesClass(Battleship):
 class NewJerseyClass(Battleship):
     ammount = 0 
     shipStats = {
-        "FP": 888, "ACC": 48, "EVA": 34, "SPD": 28,
-        "armor": 3.3, "luck": 10
+        "FP": 888, "ACC": 48, "EVA": 34, "SPD": 4,
+        "RDR": 6, "LCK": 10
     }
 
     shields = 66200
@@ -163,6 +168,7 @@ class NewJerseyClass(Battleship):
     def __init__(self, hullnumber, name):
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(DarkNeutronianArmor(vID))
         self.primaryBattery = []

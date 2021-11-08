@@ -10,8 +10,8 @@ from shipClasses.shipRole import Heavycruiser
 class ApocalypseClass(Heavycruiser):
     ammount = 0
     shipStats = {
-        "FP": 350, "ACC": 33, "EVA": 30, "SPD": 25,
-        "armor": 2.5, "luck": 10
+        "FP": 350, "ACC": 33, "EVA": 30, "SPD": 5,
+        "RDR": 5, "LCK": 10
     }
     
     shields = 10000
@@ -21,6 +21,7 @@ class ApocalypseClass(Heavycruiser):
         ApocalypseClass.ammount += 1
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(HyperShieldGen(vID))
         self.defenses['ArmorType'].append(CarbonNanoThreadsArmor(vID))
         self.primaryBattery = [triple_M12_NeutronLauchers(vID, ''.join(['T', str(x)])) for x in range(1,6)]

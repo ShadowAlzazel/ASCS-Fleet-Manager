@@ -10,8 +10,8 @@ from shipClasses.shipRole import Battlecruiser
 class ZenithClass(Battlecruiser):
     ammount = 0
     shipStats = {       
-        "FP": 493, "ACC": 47, "EVA": 37, "SPD": 31,
-        "armor": 2.75, "luck": 10
+        "FP": 493, "ACC": 47, "EVA": 37, "SPD": 6,
+        "RDR": 5, "LCK": 10
     }
 
     shields = 27500
@@ -20,6 +20,7 @@ class ZenithClass(Battlecruiser):
     def __init__(self, hullnumber, name):
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(MythrilAlloyArmor(vID))
         self.primaryBattery = []
@@ -49,8 +50,8 @@ class ZenithClass(Battlecruiser):
 class EclipseClass(Battlecruiser):
     ammount = 0
     shipStats = {       
-        "FP": 517, "ACC": 45, "EVA": 35, "SPD": 29,
-        "armor": 2.75, "luck": 10
+        "FP": 517, "ACC": 45, "EVA": 35, "SPD": 6,
+        "RDR": 5, "LCK": 10
     }
 
     shields = 25600
@@ -59,6 +60,7 @@ class EclipseClass(Battlecruiser):
     def __init__(self, hullnumber, name):
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(MythrilAlloyArmor(vID))
         self.primaryBattery = []
@@ -83,8 +85,8 @@ class EclipseClass(Battlecruiser):
 class PenumbraClass(Battlecruiser):
     ammount = 0
     shipStats = {       
-        "FP": 505, "ACC": 45, "EVA": 35, "SPD": 30,
-        "armor": 2.75, "luck": 10
+        "FP": 505, "ACC": 45, "EVA": 35, "SPD": 6,
+        "RDR": 5, "LCK": 10
     }
 
     shields = 23500
@@ -94,6 +96,7 @@ class PenumbraClass(Battlecruiser):
         PenumbraClass.ammount += 1
         super().__init__(hullnumber, name)
         vID = self.vesselID
+        self.radar = shipHexRadar(vID, self.shipStats['RDR'])
         self.defenses['ShieldType'].append(DarkEnergyShieldGen(vID))
         self.defenses['ArmorType'].append(MythrilAlloyArmor(vID))
         self.primaryBattery = [double_L18_DeuteriumLance(vID, ''.join(['T', str(x)])) for x in range(1,7)]
