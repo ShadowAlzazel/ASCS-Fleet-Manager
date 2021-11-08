@@ -12,7 +12,7 @@ class armor:
         trueDamage = damageNum // ((1 - (self.armorIntegrity / 100)) + (self.armorValue * (self.armorIntegrity / 100)))
         if damageNum / (self.armorIntegrity + 1) > self.armorIntegrity + 1:
             self.armorIntegrity = 0
-        else:
+        elif self.armorIntegrity != 0:
             self.armorIntegrity -= damageNum / self.armorIntegrity #decrerase armor integrity over contact
         self.armorIntegrity += self.armorRegen
         return trueDamage
