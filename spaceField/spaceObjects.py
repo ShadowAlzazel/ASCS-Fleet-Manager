@@ -9,4 +9,3 @@ class spaceObject():
         self.objectNumber = objectNum
         self.name = ''.join(["objects", str(objectNum)])
         self.placeSpace = []
-        
