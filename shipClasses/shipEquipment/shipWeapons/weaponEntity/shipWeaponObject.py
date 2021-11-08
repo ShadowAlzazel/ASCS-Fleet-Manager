@@ -7,3 +7,10 @@ class shipWeapon:
 
     def __init__(self, vesselID, turretDesignation):
         self.batteryID = '-'.join([vesselID, turretDesignation])
+        self.reloadTurn = 100 #preloaded
+
+    def reloadGun(self):
+        if self.reloadTurn < self.gunStats['RLD']:
+            self.reloadTurn += 1
+        else: 
+            self.reloadTurn = self.gunStats['RLD']
