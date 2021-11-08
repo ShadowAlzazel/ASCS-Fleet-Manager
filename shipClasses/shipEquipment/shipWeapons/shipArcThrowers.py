@@ -10,7 +10,7 @@ from shipClasses.shipEquipment.shipWeapons.weaponEntity import shipWeapon
 class double_A17_HAT3ArcThrowers(shipWeapon):
     gunName = 'Double (A17) HAT3 Arc-Throwers'
     gunStats = {
-        "ATK": 409 * 2, "RLD": 21, "HIT": 51, "RNG": 15
+        "ATK": 479 * 2, "RLD": 2, "HIT": 51, "RNG": 2
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)
@@ -19,7 +19,7 @@ class double_A17_HAT3ArcThrowers(shipWeapon):
 class triple_A17_HAT3ArcThrowers(shipWeapon):
     gunName = 'Triple (A17) HAT3 Arc-Throwers'
     gunStats = {
-        "ATK": 409 * 3, "RLD": 22, "HIT": 51, "RNG": 15
+        "ATK": 479 * 3, "RLD": 2, "HIT": 51, "RNG": 2
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)
@@ -28,7 +28,7 @@ class triple_A17_HAT3ArcThrowers(shipWeapon):
 class triple_A11_TeslaArcThrowers(shipWeapon):
     gunName = 'Triple (A11) Tesla Arc-Throwers'
     gunStats = {
-        "ATK": 347 * 3, "RLD": 18, "HIT": 51, "RNG": 15
+        "ATK": 347 * 3, "RLD": 2, "HIT": 51, "RNG": 2
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)
@@ -37,7 +37,7 @@ class triple_A11_TeslaArcThrowers(shipWeapon):
 class double_A5_WaveArcThrowers(shipWeapon):
     gunName = 'Double (A5) Wave Arc-Throwers'
     gunStats = {
-        "ATK": 157 * 2, "RLD": 16, "HIT": 51, "RNG": 12
+        "ATK": 177 * 2, "RLD": 2, "HIT": 51, "RNG": 1
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)

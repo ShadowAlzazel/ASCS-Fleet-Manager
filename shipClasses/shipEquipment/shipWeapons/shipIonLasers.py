@@ -10,7 +10,7 @@ from shipClasses.shipEquipment.shipWeapons.weaponEntity import shipWeapon
 class double_L18_DeuteriumLance(shipWeapon):
     gunName = 'Double (L18) Deuterium Lance'
     gunStats = {
-        "ATK": 185 * 2, "RLD": 18, "HIT": 85, "RNG": 20
+        "ATK": 185 * 2, "RLD": 2, "HIT": 85, "RNG": 4
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)
@@ -19,7 +19,7 @@ class double_L18_DeuteriumLance(shipWeapon):
 class triple_L18_DeuteriumLance(shipWeapon):
     gunName = 'Triple (L18) Deuterium Lance'
     gunStats = {
-        "ATK": 185 * 3, "RLD": 19, "HIT": 85, "RNG": 20
+        "ATK": 185 * 3, "RLD": 2, "HIT": 85, "RNG": 4
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)
@@ -28,7 +28,7 @@ class triple_L18_DeuteriumLance(shipWeapon):
 class double_L13_HadronLance(shipWeapon):
     gunName = 'Double (L13) Hadron Lance'
     gunStats = {
-        "ATK": 121 * 2, "RLD": 16, "HIT": 85, "RNG": 20
+        "ATK": 121 * 2, "RLD": 1, "HIT": 85, "RNG": 3
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation) 
@@ -37,7 +37,7 @@ class double_L13_HadronLance(shipWeapon):
 class triple_L13_HadronLance(shipWeapon):
     gunName = 'Triple (L13) Hadron Lance'
     gunStats = {
-        "ATK": 121 * 3, "RLD": 17, "HIT": 85, "RNG": 20
+        "ATK": 121 * 3, "RLD": 1, "HIT": 85, "RNG": 3
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)
@@ -46,7 +46,7 @@ class triple_L13_HadronLance(shipWeapon):
 class triple_A6_LaserLance(shipWeapon):
     gunName = 'Triple (L6) Laser Lance'
     gunStats = {
-        "ATK": 58 * 3, "RLD": 12, "HIT": 85, "RNG": 7
+        "ATK": 58 * 3, "RLD": 1, "HIT": 85, "RNG": 2
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)
@@ -55,7 +55,7 @@ class triple_A6_LaserLance(shipWeapon):
 class double_A5_LaserLance(shipWeapon):
     gunName = 'Double (L5) Laser Lance'
     gunStats = {
-        "ATK": 49 * 2, "RLD": 11, "HIT": 85, "RNG": 7
+        "ATK": 49 * 2, "RLD": 1, "HIT": 85, "RNG": 2
     }
     def __init__(self, vesselID, turretDesignation):
         super().__init__(vesselID, turretDesignation)
