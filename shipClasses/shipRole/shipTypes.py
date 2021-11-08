@@ -9,7 +9,7 @@ class Battleship(Ship):
     shiptype = 'BB'
     shipStats = {
         "FP": 650, "ACC": 35, "EVA": 30, "SPD": 25,
-        "armor": 3, "luck": 10
+        "RDR": 5, "LCK": 10
     }
 
     shields = 45000 
@@ -28,7 +28,7 @@ class Battlecruiser(Ship):
     shiptype = 'BC'
     shipStats = {       
         "FP": 500, "ACC": 45, "EVA": 35, "SPD": 29,
-        "armor": 2.75, "luck": 10
+        "RDR": 5, "LCK": 10
     }
 
     shields = 27500
@@ -47,7 +47,7 @@ class Strikecruiser(Ship):
     shiptype = 'CS'
     shipStats = {
         "FP": 280, "ACC": 38, "EVA": 40, "SPD": 33,
-        "armor": 2.5, "luck": 10
+        "RDR": 5, "LCK": 10
     }
     
     shields = 12500
@@ -66,7 +66,7 @@ class Heavycruiser(Ship):
     shiptype = 'CA'
     shipStats = {
         "FP": 350, "ACC": 33, "EVA": 30, "SPD": 25,
-        "armor": 2.5, "luck": 10
+        "RDR": 5, "LCK": 10
     }
     
     shields = 10000
@@ -85,7 +85,7 @@ class Lightcruiser(Ship):
     shiptype = 'CL'
     shipStats = {
         "FP": 200, "ACC": 35, "EVA": 45, "SPD": 35,
-        "armor": 2, "luck": 10
+        "RDR": 5, "LCK": 10
     }
     
     shields = 7500
@@ -104,7 +104,7 @@ class Destroyer(Ship):
     shiptype = 'DD'
     shipStats = {
         "FP": 100, "ACC": 45, "EVA": 65, "SPD": 55,
-        "armor": 1, "luck": 10
+        "RDR": 5, "LCK": 10
     }
     
     shields = 3500
@@ -116,4 +116,3 @@ class Destroyer(Ship):
 
         print(self.shiptype, '-', hullnumber, sep='')
 
-print("shipTypes")
